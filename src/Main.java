@@ -29,8 +29,16 @@ public class Main {
         cd1.setAuthorName("Pentatonix");
 
         JFrame f = new JFrame("Medienbibliothek");
+        JPanel p = new JPanel();
+        p.setLayout( new java.awt.GridLayout( 3, 3 ) );
+        // Das JLabel beschriften…
+        JLabel jLabel1 = new javax.swing.JLabel();
+        jLabel1.setText ( "1. ein JLabel" );
+        // …und dem JPanel zuweisen
+        p.add ( jLabel1 );
+        f.add(p);
         String[] data = {book1.getSummaryLine(),cd1.getSummaryLine()};
-        f.add(new JList<>(data));
+        p.add(new JList<>(data));
         f.pack();
         f.setSize(800,600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
