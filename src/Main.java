@@ -8,6 +8,7 @@ import javax.swing.plaf.ScrollPaneUI;
 import java.awt.*;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -33,7 +34,7 @@ public class Main {
 
         RepositoryManager rm = new RepositoryManager();
         rm.createStatement();
-        rm.createQuery("SELECT * FROM school_subject");
+        rm.createQuery("SELECT * FROM school_subject ORDER BY label");
         rm.execute();
 
         cd1.setAuthorName("Pentatonix");
@@ -51,9 +52,8 @@ public class Main {
         card1.add(new JButton("Button 1"));
         card1.add(new JButton("Button 2"));
         card1.add(new JButton("Button 3"));
-        String[] data = {book1.getSummaryLine(),cd1.getSummaryLine()};
 
-        JList<String> list = new JList<>(data);
+        JList<String> list = new JList<>(rm.getResults());
         list.setBackground(new Color(164,164,190));
 
         JScrollPane listScroller = new JScrollPane(list);

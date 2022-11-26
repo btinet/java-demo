@@ -1,6 +1,9 @@
 package model;
 
+import javax.swing.*;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RepositoryManager {
 
@@ -15,11 +18,13 @@ public class RepositoryManager {
     String user = "root";
     String pass = "";
 
+    DefaultListModel<String> results;
+
     public RepositoryManager() throws SQLException {
 
             this.connection = DriverManager.getConnection(url, user, pass);
             System.out.println("Verbindung erfolgreich hergestellt");
-
+            this.results = new DefaultListModel<>();
 
     }
 
@@ -52,14 +57,18 @@ public class RepositoryManager {
             this.result =  this.statement.executeQuery(this.query);
 
             while(this.result.next()){
-
-                System.out.println(this.result.getString(2));
+                this.results.addElement(this.result.getString(2));
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public DefaultListModel<String> getResults()
+    {
+        return this.results;
     }
 
     public void fetch() throws SQLException {

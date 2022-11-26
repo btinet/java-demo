@@ -6,13 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="736d8b9e-1df6-4c7a-bc3f-62db43577bcf" name="Changes" comment="update layout">
-      <change afterPath="$PROJECT_DIR$/connectors/mariadb-java-client-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connectors/mysql-connector-java-8.0.29-tidb-1.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RepositoryManager.java" afterDir="false" />
+    <list default="true" id="736d8b9e-1df6-4c7a-bc3f-62db43577bcf" name="Changes" comment="update model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RepositoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RepositoryManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669466031052</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update model">
+      <created>1669489628745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669489628745</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +139,7 @@
     <MESSAGE value="create HTML Files" />
     <MESSAGE value="add JFrame" />
     <MESSAGE value="update layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="update layout" />
+    <MESSAGE value="update model" />
+    <option name="LAST_COMMIT_MESSAGE" value="update model" />
   </component>
 </project>
