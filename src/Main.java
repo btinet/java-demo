@@ -27,7 +27,6 @@ public class Main {
 
         System.out.println(book1.getSummaryLine());
         System.out.println(cd1.getSummaryLine());
-        System.out.println("Hello world!");
     }
 
 }

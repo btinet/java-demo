@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>ShopProduct_structure.puml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ShopProduct_structure.puml</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">@startuml 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a>/' diagram meta data start 
+<a name="l4"><span class="ln">4    </span></a>config=StructureConfiguration; 
+<a name="l5"><span class="ln">5    </span></a>{ 
+<a name="l6"><span class="ln">6    </span></a>  &quot;projectClassification&quot;: { 
+<a name="l7"><span class="ln">7    </span></a>    &quot;searchMode&quot;: &quot;OpenProject&quot;, // OpenProject, AllProjects 
+<a name="l8"><span class="ln">8    </span></a>    &quot;includedProjects&quot;: &quot;&quot;, 
+<a name="l9"><span class="ln">9    </span></a>    &quot;pathEndKeywords&quot;: &quot;*.impl&quot;, 
+<a name="l10"><span class="ln">10   </span></a>    &quot;isClientPath&quot;: &quot;&quot;, 
+<a name="l11"><span class="ln">11   </span></a>    &quot;isClientName&quot;: &quot;&quot;, 
+<a name="l12"><span class="ln">12   </span></a>    &quot;isTestPath&quot;: &quot;&quot;, 
+<a name="l13"><span class="ln">13   </span></a>    &quot;isTestName&quot;: &quot;&quot;, 
+<a name="l14"><span class="ln">14   </span></a>    &quot;isMappingPath&quot;: &quot;&quot;, 
+<a name="l15"><span class="ln">15   </span></a>    &quot;isMappingName&quot;: &quot;&quot;, 
+<a name="l16"><span class="ln">16   </span></a>    &quot;isDataAccessPath&quot;: &quot;&quot;, 
+<a name="l17"><span class="ln">17   </span></a>    &quot;isDataAccessName&quot;: &quot;&quot;, 
+<a name="l18"><span class="ln">18   </span></a>    &quot;isDataStructurePath&quot;: &quot;&quot;, 
+<a name="l19"><span class="ln">19   </span></a>    &quot;isDataStructureName&quot;: &quot;&quot;, 
+<a name="l20"><span class="ln">20   </span></a>    &quot;isInterfaceStructuresPath&quot;: &quot;&quot;, 
+<a name="l21"><span class="ln">21   </span></a>    &quot;isInterfaceStructuresName&quot;: &quot;&quot;, 
+<a name="l22"><span class="ln">22   </span></a>    &quot;isEntryPointPath&quot;: &quot;&quot;, 
+<a name="l23"><span class="ln">23   </span></a>    &quot;isEntryPointName&quot;: &quot;&quot;, 
+<a name="l24"><span class="ln">24   </span></a>    &quot;treatFinalFieldsAsMandatory&quot;: false 
+<a name="l25"><span class="ln">25   </span></a>  }, 
+<a name="l26"><span class="ln">26   </span></a>  &quot;graphRestriction&quot;: { 
+<a name="l27"><span class="ln">27   </span></a>    &quot;classPackageExcludeFilter&quot;: &quot;&quot;, 
+<a name="l28"><span class="ln">28   </span></a>    &quot;classPackageIncludeFilter&quot;: &quot;&quot;, 
+<a name="l29"><span class="ln">29   </span></a>    &quot;classNameExcludeFilter&quot;: &quot;&quot;, 
+<a name="l30"><span class="ln">30   </span></a>    &quot;classNameIncludeFilter&quot;: &quot;&quot;, 
+<a name="l31"><span class="ln">31   </span></a>    &quot;methodNameExcludeFilter&quot;: &quot;&quot;, 
+<a name="l32"><span class="ln">32   </span></a>    &quot;methodNameIncludeFilter&quot;: &quot;&quot;, 
+<a name="l33"><span class="ln">33   </span></a>    &quot;removeByInheritance&quot;: &quot;&quot;, // inheritance/annotation based filtering is done in a second step 
+<a name="l34"><span class="ln">34   </span></a>    &quot;removeByAnnotation&quot;: &quot;&quot;, 
+<a name="l35"><span class="ln">35   </span></a>    &quot;removeByClassPackage&quot;: &quot;&quot;, // cleanup the graph after inheritance/annotation based filtering is done 
+<a name="l36"><span class="ln">36   </span></a>    &quot;removeByClassName&quot;: &quot;&quot;, 
+<a name="l37"><span class="ln">37   </span></a>    &quot;cutMappings&quot;: false, 
+<a name="l38"><span class="ln">38   </span></a>    &quot;cutEnum&quot;: true, 
+<a name="l39"><span class="ln">39   </span></a>    &quot;cutTests&quot;: true, 
+<a name="l40"><span class="ln">40   </span></a>    &quot;cutClient&quot;: true, 
+<a name="l41"><span class="ln">41   </span></a>    &quot;cutDataAccess&quot;: false, 
+<a name="l42"><span class="ln">42   </span></a>    &quot;cutInterfaceStructures&quot;: false, 
+<a name="l43"><span class="ln">43   </span></a>    &quot;cutDataStructures&quot;: false, 
+<a name="l44"><span class="ln">44   </span></a>    &quot;cutGetterAndSetter&quot;: true, 
+<a name="l45"><span class="ln">45   </span></a>    &quot;cutConstructors&quot;: true 
+<a name="l46"><span class="ln">46   </span></a>  }, 
+<a name="l47"><span class="ln">47   </span></a>  &quot;graphTraversal&quot;: { 
+<a name="l48"><span class="ln">48   </span></a>    &quot;forwardDepth&quot;: 6, 
+<a name="l49"><span class="ln">49   </span></a>    &quot;backwardDepth&quot;: 6, 
+<a name="l50"><span class="ln">50   </span></a>    &quot;classPackageExcludeFilter&quot;: &quot;&quot;, 
+<a name="l51"><span class="ln">51   </span></a>    &quot;classPackageIncludeFilter&quot;: &quot;&quot;, 
+<a name="l52"><span class="ln">52   </span></a>    &quot;classNameExcludeFilter&quot;: &quot;&quot;, 
+<a name="l53"><span class="ln">53   </span></a>    &quot;classNameIncludeFilter&quot;: &quot;&quot;, 
+<a name="l54"><span class="ln">54   </span></a>    &quot;methodNameExcludeFilter&quot;: &quot;&quot;, 
+<a name="l55"><span class="ln">55   </span></a>    &quot;methodNameIncludeFilter&quot;: &quot;&quot;, 
+<a name="l56"><span class="ln">56   </span></a>    &quot;hideMappings&quot;: false, 
+<a name="l57"><span class="ln">57   </span></a>    &quot;hideDataStructures&quot;: false, 
+<a name="l58"><span class="ln">58   </span></a>    &quot;hidePrivateMethods&quot;: true, 
+<a name="l59"><span class="ln">59   </span></a>    &quot;hideInterfaceCalls&quot;: true, // indirection: implementation -&gt; interface (is hidden) -&gt; implementation 
+<a name="l60"><span class="ln">60   </span></a>    &quot;onlyShowApplicationEntryPoints&quot;: false, // root node is included 
+<a name="l61"><span class="ln">61   </span></a>    &quot;useMethodCallsForStructureDiagram&quot;: &quot;ForwardOnly&quot; // ForwardOnly, BothDirections, No 
+<a name="l62"><span class="ln">62   </span></a>  }, 
+<a name="l63"><span class="ln">63   </span></a>  &quot;details&quot;: { 
+<a name="l64"><span class="ln">64   </span></a>    &quot;aggregation&quot;: &quot;GroupByClass&quot;, // ByClass, GroupByClass, None 
+<a name="l65"><span class="ln">65   </span></a>    &quot;showClassGenericTypes&quot;: true, 
+<a name="l66"><span class="ln">66   </span></a>    &quot;showMethods&quot;: true, 
+<a name="l67"><span class="ln">67   </span></a>    &quot;showMethodParameterNames&quot;: true, 
+<a name="l68"><span class="ln">68   </span></a>    &quot;showMethodParameterTypes&quot;: true, 
+<a name="l69"><span class="ln">69   </span></a>    &quot;showMethodReturnType&quot;: true, 
+<a name="l70"><span class="ln">70   </span></a>    &quot;showPackageLevels&quot;: 2, 
+<a name="l71"><span class="ln">71   </span></a>    &quot;showDetailedClassStructure&quot;: true 
+<a name="l72"><span class="ln">72   </span></a>  }, 
+<a name="l73"><span class="ln">73   </span></a>  &quot;rootClass&quot;: &quot;product.ShopProduct&quot;, 
+<a name="l74"><span class="ln">74   </span></a>  &quot;extensionCallbackMethod&quot;: &quot;&quot; // qualified.class.name#methodName - signature: public static String method(String) 
+<a name="l75"><span class="ln">75   </span></a>} 
+<a name="l76"><span class="ln">76   </span></a>diagram meta data end '/ 
+<a name="l77"><span class="ln">77   </span></a> 
+<a name="l78"><span class="ln">78   </span></a> 
+<a name="l79"><span class="ln">79   </span></a> 
+<a name="l80"><span class="ln">80   </span></a>digraph g { 
+<a name="l81"><span class="ln">81   </span></a>    rankdir=&quot;TB&quot; 
+<a name="l82"><span class="ln">82   </span></a>    splines=polyline 
+<a name="l83"><span class="ln">83   </span></a>     
+<a name="l84"><span class="ln">84   </span></a> 
+<a name="l85"><span class="ln">85   </span></a>'nodes  
+<a name="l86"><span class="ln">86   </span></a>subgraph cluster_309474065 {  
+<a name="l87"><span class="ln">87   </span></a>    label=product 
+<a name="l88"><span class="ln">88   </span></a>    labeljust=l 
+<a name="l89"><span class="ln">89   </span></a>    fillcolor=&quot;#ececec&quot; 
+<a name="l90"><span class="ln">90   </span></a>    style=filled 
+<a name="l91"><span class="ln">91   </span></a>    
+<a name="l92"><span class="ln">92   </span></a>   BookProduct309474065[ 
+<a name="l93"><span class="ln">93   </span></a>    label=&lt;&lt;TABLE BORDER=&quot;1&quot; CELLBORDER=&quot;0&quot; CELLPADDING=&quot;4&quot; CELLSPACING=&quot;0&quot;&gt; 
+<a name="l94"><span class="ln">94   </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;(C)BookProduct&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l95"><span class="ln">95   </span></a>&lt;HR/&gt; 
+<a name="l96"><span class="ln">96   </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   pages: int [1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l97"><span class="ln">97   </span></a>&lt;/TABLE&gt;&gt; 
+<a name="l98"><span class="ln">98   </span></a>    style=filled 
+<a name="l99"><span class="ln">99   </span></a>    margin=0 
+<a name="l100"><span class="ln">100  </span></a>    shape=plaintext 
+<a name="l101"><span class="ln">101  </span></a>    fillcolor=&quot;#FFFFFF&quot; 
+<a name="l102"><span class="ln">102  </span></a>]; 
+<a name="l103"><span class="ln">103  </span></a> 
+<a name="l104"><span class="ln">104  </span></a>CdProduct309474065[ 
+<a name="l105"><span class="ln">105  </span></a>    label=&lt;&lt;TABLE BORDER=&quot;1&quot; CELLBORDER=&quot;0&quot; CELLPADDING=&quot;4&quot; CELLSPACING=&quot;0&quot;&gt; 
+<a name="l106"><span class="ln">106  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;(C)CdProduct&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l107"><span class="ln">107  </span></a>&lt;HR/&gt; 
+<a name="l108"><span class="ln">108  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   playLength: int [1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l109"><span class="ln">109  </span></a>&lt;/TABLE&gt;&gt; 
+<a name="l110"><span class="ln">110  </span></a>    style=filled 
+<a name="l111"><span class="ln">111  </span></a>    margin=0 
+<a name="l112"><span class="ln">112  </span></a>    shape=plaintext 
+<a name="l113"><span class="ln">113  </span></a>    fillcolor=&quot;#FFFFFF&quot; 
+<a name="l114"><span class="ln">114  </span></a>]; 
+<a name="l115"><span class="ln">115  </span></a> 
+<a name="l116"><span class="ln">116  </span></a>ShopProduct309474065[ 
+<a name="l117"><span class="ln">117  </span></a>    label=&lt;&lt;TABLE BORDER=&quot;1&quot; CELLBORDER=&quot;0&quot; CELLPADDING=&quot;4&quot; CELLSPACING=&quot;0&quot;&gt; 
+<a name="l118"><span class="ln">118  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;(C)ShopProduct&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l119"><span class="ln">119  </span></a>&lt;HR/&gt; 
+<a name="l120"><span class="ln">120  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   authorName: String [0..1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l121"><span class="ln">121  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   firstName: String [0..1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l122"><span class="ln">122  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   lastName: String [0..1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l123"><span class="ln">123  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   price: int [1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l124"><span class="ln">124  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   title: String [0..1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l125"><span class="ln">125  </span></a>&lt;TR&gt;&lt;TD ALIGN=&quot;LEFT&quot; &gt;#   year: int [1]&lt;/TD&gt;&lt;/TR&gt; 
+<a name="l126"><span class="ln">126  </span></a>&lt;/TABLE&gt;&gt; 
+<a name="l127"><span class="ln">127  </span></a>    style=filled 
+<a name="l128"><span class="ln">128  </span></a>    margin=0 
+<a name="l129"><span class="ln">129  </span></a>    shape=plaintext 
+<a name="l130"><span class="ln">130  </span></a>    fillcolor=&quot;#FFFFFF&quot; 
+<a name="l131"><span class="ln">131  </span></a>]; 
+<a name="l132"><span class="ln">132  </span></a>}  
+<a name="l133"><span class="ln">133  </span></a> 
+<a name="l134"><span class="ln">134  </span></a>'edges     
+<a name="l135"><span class="ln">135  </span></a>ShopProduct309474065 -&gt; BookProduct309474065[arrowhead=none, arrowtail=empty, dir=both]; 
+<a name="l136"><span class="ln">136  </span></a>ShopProduct309474065 -&gt; CdProduct309474065[arrowhead=none, arrowtail=empty, dir=both]; 
+<a name="l137"><span class="ln">137  </span></a>     
+<a name="l138"><span class="ln">138  </span></a>} 
+<a name="l139"><span class="ln">139  </span></a>@enduml</span></pre>
+</body>
+</html>
