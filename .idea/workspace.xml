@@ -6,10 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="736d8b9e-1df6-4c7a-bc3f-62db43577bcf" name="Changes" comment="add JFrame">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/demo_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="736d8b9e-1df6-4c7a-bc3f-62db43577bcf" name="Changes" comment="update layout">
+      <change afterPath="$PROJECT_DIR$/connectors/mariadb-java-client-3.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/connectors/mysql-connector-java-8.0.29-tidb-1.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/RepositoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +52,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/BenjaminWagner/Desktop",
-    "project.structure.last.edited": "Artifacts",
+    "last_opened_file_path": "C:/Users/BenjaminWagner/IdeaProjects/java-demo/connectors/mysql-connector-java-8.0.29-tidb-1.0.2.jar",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669459319432</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update layout">
+      <created>1669466031052</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669466031052</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +134,7 @@
     <MESSAGE value="create product classes" />
     <MESSAGE value="create HTML Files" />
     <MESSAGE value="add JFrame" />
-    <option name="LAST_COMMIT_MESSAGE" value="add JFrame" />
+    <MESSAGE value="update layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="update layout" />
   </component>
 </project>
