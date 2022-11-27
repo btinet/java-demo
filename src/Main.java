@@ -1,15 +1,14 @@
+
 import model.RepositoryManager;
+import model.entity.SchoolSubject;
+import model.repository.SchoolSubjectRepository;
 import product.BookProduct;
 import product.CdProduct;
 
-import javax.smartcardio.CardChannel;
 import javax.swing.*;
-import javax.swing.plaf.ScrollPaneUI;
 import java.awt.*;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Main {
 
@@ -32,10 +31,15 @@ public class Main {
                 59
         );
 
-        RepositoryManager rm = new RepositoryManager();
-        rm.createStatement();
-        rm.createQuery("SELECT * FROM school_subject ORDER BY label");
-        rm.execute();
+
+
+        String[] columnNames = {
+                "Fach",
+                "Kürzel",
+                "Fachbereich"
+        };
+
+
 
         cd1.setAuthorName("Pentatonix");
 
@@ -49,24 +53,21 @@ public class Main {
         JPanel card2 = new JPanel();
         card2.setLayout(new BoxLayout(card2, BoxLayout.PAGE_AXIS));
         card1.setLayout(new FlowLayout());
-        card1.add(new JButton("Button 1"));
-        card1.add(new JButton("Button 2"));
-        card1.add(new JButton("Button 3"));
 
-        JList<String> list = new JList<>(rm.getResults());
-        list.setBackground(new Color(164,164,190));
+        JPanel panel = new JPanel();
 
-        JScrollPane listScroller = new JScrollPane(list);
-        JScrollPane listScroller2 = new JScrollPane(list);
+        SchoolSubjectRepository repository = new SchoolSubjectRepository();
+        repository.find(1);
 
-
-
+        JList<String> list = new JList<>(repository.getResults());
+        main.add(list);
+        panel.setToolTipText("Liste mit Fächern");
 
         JLabel label = new JLabel("Medienübersicht");
         card2.add(label);
         card2.add(Box.createRigidArea(new Dimension(0,5)));
         card1.add(Box.createRigidArea(new Dimension(0,5)));
-        card2.add(listScroller2);
+        card2.add(panel);
         card2.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         card1.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 
@@ -75,6 +76,7 @@ public class Main {
         f.setLayout( new java.awt.GridLayout( 3, 0 ) );
         top.setLayout(new CardLayout(1,1));
         main.setLayout(new GridLayout(0,1));
+
 
         // Das JLabel beschriften…
         JLabel jLabel1 = new javax.swing.JLabel();

@@ -1,27 +1,30 @@
 package model;
 
-import javax.swing.*;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import model.entity.AbstractEntity;
 
-public class RepositoryManager {
+import javax.swing.*;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.*;
+
+public abstract class RepositoryManager {
 
     Connection connection;
 
-    Statement statement;
+    protected Statement statement;
 
-    ResultSet result;
+    protected ResultSet result;
 
-    String query;
+    protected String query;
     String url = "jdbc:mysql://localhost:3306/tk_ceberus";
     String user = "root";
     String pass = "";
 
+    AbstractEntity entity;
+
     DefaultListModel<String> results;
 
-    public RepositoryManager() throws SQLException {
-
+    public RepositoryManager(AbstractEntity entity) throws SQLException {
+        this.entity = entity;
             this.connection = DriverManager.getConnection(url, user, pass);
             System.out.println("Verbindung erfolgreich hergestellt");
             this.results = new DefaultListModel<>();
@@ -51,15 +54,13 @@ public class RepositoryManager {
         }
     }
 
-    public void execute()
-    {
+    public void execute() throws SQLException {
         try {
             this.result =  this.statement.executeQuery(this.query);
 
             while(this.result.next()){
-                this.results.addElement(this.result.getString(2));
+                this.results.addElement(this.result.getString(1));
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -69,11 +70,6 @@ public class RepositoryManager {
     public DefaultListModel<String> getResults()
     {
         return this.results;
-    }
-
-    public void fetch() throws SQLException {
-
-
     }
 
 }
