@@ -3,6 +3,7 @@ package model;
 import model.entity.AbstractEntity;
 
 import javax.swing.*;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
@@ -19,16 +20,20 @@ public abstract class RepositoryManager {
     String user = "root";
     String pass = "";
 
-    AbstractEntity entity;
+    Class<?> entity;
 
     DefaultListModel<String> results;
 
-    public RepositoryManager(AbstractEntity entity) throws SQLException {
-        this.entity = entity;
-            this.connection = DriverManager.getConnection(url, user, pass);
-            System.out.println("Verbindung erfolgreich hergestellt");
-            this.results = new DefaultListModel<>();
+    public RepositoryManager(String entity) throws SQLException, ClassNotFoundException {
+        this.entity = Class.forName(entity);
+        this.connection = DriverManager.getConnection(url, user, pass);
+        System.out.println("Verbindung erfolgreich hergestellt");
+        this.results = new DefaultListModel<>();
 
+    }
+
+    public Class<?> getEntity() {
+        return entity;
     }
 
     public void createQuery(String query)

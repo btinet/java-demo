@@ -2,11 +2,11 @@ package model.entity;
 
 public class SchoolSubject extends AbstractEntity {
 
-    int id;
+    public int id;
     String label;
     String abbr;
     String created;
-    String updated;
+    private String updated;
 
     public SchoolSubject() {
         super();
