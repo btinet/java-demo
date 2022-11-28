@@ -10,20 +10,9 @@ public class SchoolSubjectRepository extends RepositoryManager {
 
     public SchoolSubjectRepository() throws SQLException, ClassNotFoundException {
         super("model.entity.SchoolSubject");
-        this.createStatement();
     }
 
-    public void find(int id) throws SQLException
-    {
-        this.createQuery("SELECT * FROM school_subject WHERE id =" + id + " LIMIT 1");
-        this.execute();
-    }
 
-    public void findAll() throws SQLException
-    {
-        this.createQuery("SELECT * FROM school_subject");
-        this.execute();
-    }
 
     public void execute() throws SQLException
     {

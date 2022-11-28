@@ -1,5 +1,7 @@
 package model.entity;
 
+import model.AbstractEntity;
+
 public class SchoolSubject extends AbstractEntity {
 
     public int id;
