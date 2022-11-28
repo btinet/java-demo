@@ -18,7 +18,6 @@ public class SchoolSubjectRepository extends RepositoryManager {
 
     public void execute() throws SQLException
     {
-
         this.result =  this.statement.executeQuery(this.query);
 
         while(this.result.next()){
