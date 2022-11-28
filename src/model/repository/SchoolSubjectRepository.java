@@ -12,10 +12,13 @@ public class SchoolSubjectRepository extends RepositoryManager {
         super("model.entity.SchoolSubject");
     }
 
-
+    /**
+     * getModifiers() => 0 = protected; 1 = public; 2 = private
+     */
 
     public void execute() throws SQLException
     {
+
         this.result =  this.statement.executeQuery(this.query);
 
         while(this.result.next()){

@@ -4,7 +4,7 @@ import model.AbstractEntity;
 
 public class SchoolSubject extends AbstractEntity {
 
-    public int id;
+    int id;
     String label;
     String abbr;
     String created;

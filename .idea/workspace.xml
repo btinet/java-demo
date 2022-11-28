@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736d8b9e-1df6-4c7a-bc3f-62db43577bcf" name="Changes" comment="update model">
-      <change afterPath="$PROJECT_DIR$/src/model/AbstractModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RepositoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RepositoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entity/SchoolSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entity/SchoolSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/repository/SchoolSubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/repository/SchoolSubjectRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/BenjaminWagner/IdeaProjects/java-demo/connectors/mysql-connector-java-8.0.29-tidb-1.0.2.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/BenjaminWagner/IdeaProjects/java-demo/connectors/mysql-connector-java-8.0.29-tidb-1.0.2.jar",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="project settings" />
@@ -143,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669577608465</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update model">
+      <created>1669615298448</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669615298448</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update model">
+      <created>1669615493519</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669615493519</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -20,7 +20,7 @@ public abstract class RepositoryManager extends AbstractModel {
 
     public void findAll() throws SQLException
     {
-        this.createQuery("SELECT * FROM school_subject");
+        this.createQuery("SELECT * FROM " + this.table + "");
         this.execute();
     }
 

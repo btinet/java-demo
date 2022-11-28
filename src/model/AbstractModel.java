@@ -76,8 +76,7 @@ abstract public class AbstractModel {
 
     protected String generateSnakeTailString(String value)
     {
-        String[] array = value.split("(?=\\p{Upper})");
-        String string = String.join("_", array).toLowerCase();
+        String string = String.join("_", value.split("(?=\\p{Upper})")).toLowerCase();
         System.out.println(string);
         return string;
     }
