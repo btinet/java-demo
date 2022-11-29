@@ -24,7 +24,7 @@ public abstract class RepositoryManager extends AbstractModel {
 
     public void find(int id) throws SQLException
     {
-        this.createQuery("SELECT " + this.fields + " FROM " + this.table + " WHERE id =" + id + " LIMIT 1");
+        this.createQuery("SELECT " + this.generateStringFromDefaultList(this.fields) + " FROM " + this.table + " WHERE id =" + id + " LIMIT 1");
         this.execute();
     }
 

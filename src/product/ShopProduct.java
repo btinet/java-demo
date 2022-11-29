@@ -1,6 +1,5 @@
 package product;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 abstract class ShopProduct {
 

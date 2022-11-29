@@ -1,6 +1,7 @@
 package model;
 
 import javax.swing.*;
+import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.StringJoiner;
 
@@ -15,7 +16,7 @@ abstract public class AbstractModel {
     DefaultListModel<String> results;
 
     protected String query;
-    String url = "jdbc:mysql://localhost:3306/tk_ceberus";
+    String url = "jdbc:mysql://localhost:3306/test";
     String user = "root";
     String pass = "";
 
@@ -56,17 +57,24 @@ abstract public class AbstractModel {
         }
     }
 
-    public void execute() throws SQLException {
-        try {
-            this.result =  this.statement.executeQuery(this.query);
+    /**
+     * getModifiers() => 0 = protected; 1 = public; 2 = private
+     */
 
-            while(this.result.next()){
-                this.results.addElement(this.result.getString(1));
+    public void execute() throws SQLException
+    {
+        this.result =  this.statement.executeQuery(this.query);
+
+        while(this.result.next()){
+
+            StringBuilder str = new StringBuilder();
+            for(Field field : this.getEntity().getDeclaredFields()){
+                System.out.println("Feld: " + field.getName() + " ist " + field.getModifiers());
+                str.append(this.result.getString(field.getName()));
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+            this.getResults().addElement(str.toString());
 
+        }
     }
 
     public DefaultListModel<String> getResults()
@@ -84,7 +92,7 @@ abstract public class AbstractModel {
     protected String generateStringFromDefaultList(DefaultListModel<String> list)
     {
 
-        String string = String.join("_", list.toString()).toLowerCase();
+        String string = String.join(", ", list.toString()).toLowerCase().replaceAll("\\[|\\]","");;
         System.out.println(string);
         return string;
     }
