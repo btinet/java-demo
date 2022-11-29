@@ -1,7 +1,6 @@
 package model.repository;
 
 import model.RepositoryManager;
-import model.entity.SchoolSubject;
 
 import java.lang.reflect.Field;
 import java.sql.SQLException;

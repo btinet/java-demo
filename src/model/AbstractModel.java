@@ -81,4 +81,12 @@ abstract public class AbstractModel {
         return string;
     }
 
+    protected String generateStringFromDefaultList(DefaultListModel<String> list)
+    {
+
+        String string = String.join("_", list.toString()).toLowerCase();
+        System.out.println(string);
+        return string;
+    }
+
 }

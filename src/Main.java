@@ -56,7 +56,10 @@ public class Main {
 
         JPanel panel = new JPanel();
 
+        DefaultListModel<String> liste = new DefaultListModel<>();
+        liste.addElement("id");
         SchoolSubjectRepository repository = new SchoolSubjectRepository();
+        repository.setFields(liste);
         repository.find(1);
 
         JList<String> list = new JList<>(repository.getResults());
