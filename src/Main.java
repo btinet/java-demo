@@ -20,12 +20,25 @@ public class Main {
         f.setSize(800,600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // 1.  Repository initialisieren
+        SchoolSubjectRepository repository = new SchoolSubjectRepository();
+
+        // 2a. Spaltenliste erstellen
         DefaultListModel<String> liste = new DefaultListModel<>();
+        // 2b. Spalten definieren
         liste.addElement("id");
         liste.addElement("label");
-        SchoolSubjectRepository repository = new SchoolSubjectRepository();
+        liste.addElement("abbr");
+        // 2c. Spaltenliste zur Abfrage hinzufügen
         repository.setFields(liste);
-        repository.findAll();
+
+        // 3.  Sortierung hinzufügen
+        repository.addOrderStatement("label","asc");
+
+        // 4. SQL-Abfrage starten
+        repository.findAll();   // Alle Datensätze
+        // repository.find(1);  // Ein Datensatz mit id = 1
+
 
         JLabel label = new JLabel("Medienübersicht");
         JList<String> list = new JList<>(repository.getResults());

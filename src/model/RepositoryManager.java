@@ -1,7 +1,10 @@
 package model;
 
+import org.jetbrains.annotations.Nullable;
+
 import javax.swing.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 public abstract class RepositoryManager extends AbstractModel {
 
@@ -28,9 +31,10 @@ public abstract class RepositoryManager extends AbstractModel {
         this.execute();
     }
 
-    public void findAll() throws SQLException
+
+    public  void findAll() throws SQLException
     {
-        this.createQuery("SELECT * FROM " + this.table + "");
+        this.createQuery("SELECT * FROM " + this.table + " " + this.getOrderStatementAsString() + "");
         this.execute();
     }
 

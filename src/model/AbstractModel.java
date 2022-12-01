@@ -3,7 +3,7 @@ package model;
 import javax.swing.*;
 import java.lang.reflect.Field;
 import java.sql.*;
-import java.util.StringJoiner;
+import java.util.*;
 
 abstract public class AbstractModel {
 
@@ -22,12 +22,15 @@ abstract public class AbstractModel {
 
     protected Class<?> entity;
 
+    Map<String ,String> orderBy;
+
     public AbstractModel(String entity) throws ClassNotFoundException, SQLException {
         this.entity = Class.forName(entity);
         this.connection = DriverManager.getConnection(url, user, pass);
         System.out.println("Verbindung erfolgreich hergestellt");
         this.results = new DefaultListModel<>();
         this.createStatement();
+        this.orderBy = new HashMap<>();
     }
 
     public Class<?> getEntity() {
@@ -95,6 +98,38 @@ abstract public class AbstractModel {
         String string = String.join(", ", list.toString()).toLowerCase().replaceAll("\\[|\\]","");;
         System.out.println(string);
         return string;
+    }
+
+    protected String getOrderStatementAsString()
+    {
+        int i = 1;
+        if(0 < this.orderBy.keySet().toArray().length)
+        {
+            int length = this.orderBy.keySet().toArray().length;
+            StringBuilder outputString = new StringBuilder();
+
+            outputString.append("ORDER BY");
+            outputString.append(" ");
+
+            for (String key : this.orderBy.keySet())
+            {
+                outputString.append(key);
+                outputString.append(" ");
+                outputString.append(this.orderBy.get(key));
+                if(i < length)
+                {
+                    outputString.append(", ");
+                }
+                i++;
+            }
+            return outputString.toString();
+        }
+        return "";
+    }
+
+    public void addOrderStatement(String key, String value)
+    {
+        this.orderBy.put(key,value);
     }
 
 }
