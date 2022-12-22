@@ -1,6 +1,8 @@
 package product;
 
 
+import java.util.Objects;
+
 abstract class ShopProduct {
 
     protected String title;
@@ -29,12 +31,7 @@ abstract class ShopProduct {
         String base  = "";
         base += title;
         base += " (";
-        if(authorName != null)
-        {
-            base += authorName;
-        } else {
-            base += firstName + " " + lastName;
-        }
+        base += Objects.requireNonNullElseGet(authorName, () -> firstName + " " + lastName);
         base += ") ";
         return base;
     }

@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        JFrame f = new JFrame("Medienbibliothek");
+        JFrame f = new JFrame("Schulfächer");
         f.setLayout(new GridLayout(1,1));
         f.add(Box.createRigidArea(new Dimension(0,5)));
         f.setSize(800,600);

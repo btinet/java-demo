@@ -1,12 +1,7 @@
 package model.repository;
 
 import model.RepositoryManager;
-
-import javax.swing.*;
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
 import java.sql.SQLException;
-import java.util.Arrays;
 
 public class SchoolSubjectRepository extends RepositoryManager {
 
@@ -31,7 +26,6 @@ public class SchoolSubjectRepository extends RepositoryManager {
                 {
                     str.append(" ");
                 }
-                System.out.println(this.result.getString(field.toString()));
                 i++;
             }
             this.getResults().addElement(str.toString());

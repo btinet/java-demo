@@ -16,7 +16,7 @@ abstract public class AbstractModel {
     DefaultListModel<String> results;
 
     protected String query;
-    String url = "jdbc:mysql://it.treptowkolleg.de:3306/bwagner_5pk";
+    String url = "jdbc:mysql://it.treptowkolleg.de:3306/tk_ceberus";
     String user = "adm_bwagner";
     String pass = "Camilla@23";
 
