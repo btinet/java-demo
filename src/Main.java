@@ -2,6 +2,7 @@
 import model.RepositoryManager;
 import model.entity.SchoolSubject;
 import model.repository.SchoolSubjectRepository;
+import org.intellij.lang.annotations.JdkConstants;
 import product.BookProduct;
 import product.CdProduct;
 
@@ -15,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
         JFrame f = new JFrame("Schulfächer");
-        f.setLayout(new GridLayout(1,1));
+        f.setLayout(new FlowLayout());
         f.add(Box.createRigidArea(new Dimension(0,5)));
         f.setSize(800,600);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
